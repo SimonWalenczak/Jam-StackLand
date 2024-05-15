@@ -5,10 +5,10 @@ public class PlayerController : MonoBehaviour
     public GameObject CardSelected;
 
     private RaycastHit[] _hits = new RaycastHit[16];
-    
+
     private void Update()
     {
-        if(CardSelected != null)
+        if (CardSelected != null)
         {
             Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -19,8 +19,9 @@ public class PlayerController : MonoBehaviour
                 {
                     continue;
                 }
-                Vector3 expectedPosition = new Vector3(_hits[i].point.x, _hits[i].point.y + 0.1f, _hits[i].point.z);
-                CardSelected.transform.position = expectedPosition;
+
+                Vector3 expectedPosition = new Vector3(_hits[i].point.x, _hits[i].point.y + 0.15f, _hits[i].point.z);
+                CardSelected.transform.localPosition = expectedPosition;
             }
         }
     }
