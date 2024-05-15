@@ -5,4 +5,6 @@ using UnityEngine;
 public class ElementData : ScriptableObject
 {
     [field: SerializeField] public List<ElementData> ElementsRequieres;
+
+    public Sprite CardSprite;
 }
