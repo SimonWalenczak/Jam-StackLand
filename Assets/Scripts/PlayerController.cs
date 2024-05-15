@@ -1,18 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     public GameObject CardSelected;
 
+    private RaycastHit[] _hits = new RaycastHit[16];
+    
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if(CardSelected != null)
         {
-            RaycastHit hit;
+            Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if(Physics.Raycast())
+            int hits = Physics.RaycastNonAlloc(r, _hits);
+            for (int i = 0; i < hits; i++)
+            {
+                if (_hits[i].collider.TryGetComponent(out Card card))
+                {
+                    continue;
+                }
+                Vector3 expectedPosition = new Vector3(_hits[i].point.x, _hits[i].point.y + 0.1f, _hits[i].point.z);
+                CardSelected.transform.position = expectedPosition;
+            }
         }
     }
 }
