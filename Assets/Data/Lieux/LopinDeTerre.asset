@@ -12,7 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d947b5bb4cd4ad546951f8b2cdbdb452, type: 3}
   m_Name: LopinDeTerre
   m_EditorClassIdentifier: 
-  ElementsRequieres: []
+  Type: 1
+  ElementsRequieresForCraft:
+  - ElementToCraft: {fileID: 11400000, guid: d5846468dc39fbb4cb9b6a430f68f366, type: 2}
+    ElementsRequieres:
+    - {fileID: 11400000, guid: d5846468dc39fbb4cb9b6a430f68f366, type: 2}
+    TimeToCraft: 6
+  - ElementToCraft: {fileID: 11400000, guid: 4eb1854b5e3728e4796dee483454eedd, type: 2}
+    ElementsRequieres:
+    - {fileID: 11400000, guid: 4eb1854b5e3728e4796dee483454eedd, type: 2}
+    TimeToCraft: 6
   CardSprite: {fileID: 0}
   GoldValue: 0
   DefValue: 0
+  RepearElement: []
+  Destructable: 0

@@ -5,6 +5,8 @@ using UnityEngine;
 public enum ElementType
 {
     Arme,
+    LopinDeTerre,
+    Foret,
     Lieu,
     Ressource
 }
@@ -14,9 +16,7 @@ public class ElementData : ScriptableObject
 {
     public ElementType Type;
     
-    [field: SerializeField] public List<ElementData> ElementsRequieres;
-
-    public float TimeToCraft;
+    [field: SerializeField] public List<ElementsRequieresForCraft> ElementsRequieresForCraft;
     
     public Sprite CardSprite;
     public int GoldValue;
@@ -24,4 +24,13 @@ public class ElementData : ScriptableObject
     
     [field: SerializeField] public List<ElementData> RepearElement;
 
+    public bool Destructable;
+}
+
+[Serializable]
+public class ElementsRequieresForCraft
+{
+    public ElementData ElementToCraft;
+    public List<ElementData> ElementsRequieres;
+    public int TimeToCraft;
 }
