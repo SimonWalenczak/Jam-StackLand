@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d947b5bb4cd4ad546951f8b2cdbdb452, type: 3}
   m_Name: Fil
   m_EditorClassIdentifier: 
-  ElementsRequieres: []
+  Type: 2
+  ElementsCraftable: []
+  ElementsRequieresForCraft: []
   CardSprite: {fileID: 0}
   GoldValue: 0
   DefValue: 0
+  RepearElement: []

@@ -12,7 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d947b5bb4cd4ad546951f8b2cdbdb452, type: 3}
   m_Name: Menuiserie
   m_EditorClassIdentifier: 
-  ElementsRequieres: []
+  Type: 1
+  ElementsRequieresForCraft:
+  - ElementToCraft: {fileID: 11400000, guid: cfe414e7fa40de245baf43da3f1cdcec, type: 2}
+    ElementsRequieres:
+    - {fileID: 11400000, guid: b15fe192a0e741c43af4eb058d30211e, type: 2}
+    - {fileID: 11400000, guid: a83be6a51d7f8774c86ed99e995d0cdc, type: 2}
+    - {fileID: 11400000, guid: 92bc2e68c4ff3f740abf11768f9ca063, type: 2}
+    TimeToCraft: 15
   CardSprite: {fileID: 0}
   GoldValue: 0
   DefValue: 0
+  RepearElement: []
+  Destructable: 0
