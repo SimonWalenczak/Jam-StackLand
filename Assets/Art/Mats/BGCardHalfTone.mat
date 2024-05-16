@@ -49,7 +49,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CardBgTexture2D:
-        m_Texture: {fileID: 2800000, guid: 8df13d22a0f404544882d0e1b9e82001, type: 3}
+        m_Texture: {fileID: 2800000, guid: cb19d1a25750a0d4f83bbbadc3ac8948, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -107,7 +107,7 @@ Material:
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
-    - _CardLerp: 0.503
+    - _CardLerp: 0.358
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
@@ -122,7 +122,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _GradientPower: 0.63
+    - _GradientPower: 0.93
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
