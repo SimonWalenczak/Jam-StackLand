@@ -13,7 +13,6 @@ public class Card : MonoBehaviour
     private bool IsParentable;
 
     [SerializeField] private GameObject NbChildrenGroup;
-    [SerializeField] private TextMeshPro NbChildrenText;
 
     private void OnMouseDown()
     {
@@ -71,7 +70,6 @@ public class Card : MonoBehaviour
             transform.position = new Vector3(transform.position.x, 0.1f, transform.position.z);
 
             NbChildrenGroup.SetActive(true);
-            NbChildrenText.text = Children.Count.ToString();
         }
 
         IsParentable = Children.Count == 0;
