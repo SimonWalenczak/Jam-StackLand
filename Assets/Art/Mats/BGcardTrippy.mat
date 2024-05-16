@@ -40,12 +40,20 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _BorderMask:
+        m_Texture: {fileID: 2800000, guid: 0741b8a59ad7e8041a25d5d51bb88400, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BordersMask:
+        m_Texture: {fileID: 2800000, guid: 0741b8a59ad7e8041a25d5d51bb88400, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CardBgTexture2D:
-        m_Texture: {fileID: 2800000, guid: ec6d7f81420a4824d9bfc6e8a4e92e4f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8df13d22a0f404544882d0e1b9e82001, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -112,19 +120,23 @@ Material:
     - _BlendModePreserveSpecular: 1
     - _Brightness: -2.91
     - _BumpScale: 1
-    - _CardBgLerp: 0.28
+    - _CardBgLerp: 0.2
+    - _CardLerp: 0.337
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
+    - _DotsX: 27
+    - _DotsY: 37.17
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _GradientPower: 0.58
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
@@ -139,14 +151,16 @@ Material:
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
+    - _invertDots: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DotsColor: {r: 0.04258634, g: 0.31132078, b: 0.08071029, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _TrippyColor: {r: 1, g: 0.9457758, b: 0.6462264, a: 0}
-    - _TrippyColorA: {r: 1, g: 1, b: 1, a: 0}
-    - _TrippyColorB: {r: 0.9960785, g: 0.41960788, b: 0.46274513, a: 0}
+    - _TrippyColorA: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 0}
+    - _TrippyColorB: {r: 0.7252844, g: 0.8113208, b: 0.7079922, a: 0}
     - _TrippyDarkColor: {r: 1, g: 0, b: 0, a: 0}
     - _TrippyLightColor: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
