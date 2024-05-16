@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class Card : MonoBehaviour
@@ -12,15 +11,12 @@ public class Card : MonoBehaviour
 
     private bool IsParentable;
 
-    [SerializeField] private GameObject NbChildrenGroup;
-    [SerializeField] private TextMeshPro NbChildrenText;
-
     private void OnMouseDown()
     {
         GameManager.Instance.PlayerController.CardSelected = gameObject;
 
-        RemoveFromParentsChildren();
-
+        RemoveChildrenFromParent(Children);
+        
         transform.parent = null;
         Parent = null;
     }
@@ -43,14 +39,7 @@ public class Card : MonoBehaviour
                     transform.parent = _hits[i].transform;
                     Parent = _hits[i].transform.gameObject;
 
-                    // Ajoute la carte en tant qu'enfant de la carte sur laquelle elle est posée
-                    _hits[i].transform.gameObject.GetComponent<Card>().AddChild(gameObject);
-
-                    // Si la carte a des enfants, les ajoute également à la carte sur laquelle elle est posée
-                    foreach (var child in Children)
-                    {
-                        _hits[i].transform.gameObject.GetComponent<Card>().AddChild(child);
-                    }
+                    AddChildrenToParent(Children);
                 }
             }
         }
@@ -62,102 +51,50 @@ public class Card : MonoBehaviour
         {
             transform.position = new Vector3(Parent.transform.position.x, Parent.transform.position.y + 0.02f,
                 Parent.transform.position.z - 0.5f);
-            
-            NbChildrenGroup.SetActive(false);
         }
-
-        if (Parent == null)
+        else
         {
             transform.position = new Vector3(transform.position.x, 0.1f, transform.position.z);
-
-            NbChildrenGroup.SetActive(true);
-            NbChildrenText.text = Children.Count.ToString();
         }
 
         IsParentable = Children.Count == 0;
     }
 
-    public void AddChild(GameObject child)
-    {
-        Children.Add(child);
-
-        // Ajoute le nouvel enfant à tous les parents de cette carte
-        Card parentCard = this;
-        while (parentCard.Parent != null)
-        {
-            parentCard = parentCard.Parent.GetComponent<Card>();
-            parentCard.Children.Add(child);
-        }
-    }
-
-    private void RemoveFromParentsChildren()
-    {
-        // Retire la carte sélectionnée de la liste d'enfants de ses parents de manière récursive
-        Card parentCard = this;
-        while (parentCard.Parent != null)
-        {
-            parentCard = parentCard.Parent.GetComponent<Card>();
-            parentCard.Children.Remove(gameObject);
-        }
-
-        // Retire également tous les enfants de la carte sélectionnée de la liste d'enfants de ses parents de manière récursive
-        RemoveChildrenFromParents(gameObject);
-    }
-
-    private void RemoveChildrenFromParents(GameObject child)
-    {
-        Card parentCard = this;
-        while (parentCard.Parent != null)
-        {
-            parentCard = parentCard.Parent.GetComponent<Card>();
-
-            foreach (var childrenOfChild in child.GetComponent<Card>().Children)
-            {
-                parentCard.Children.Remove(childrenOfChild);
-            }
-        }
-    }
-
     private void AddChildrenToParent(List<GameObject> children)
     {
-        List<GameObject> childrenToAdd = new List<GameObject>(children);
-
         if (Parent != null)
         {
             Card parentCard = Parent.GetComponent<Card>();
-
+            
             if (parentCard.Children.Contains(gameObject) == false)
                 parentCard.Children.Add(gameObject);
 
-            foreach (var child in childrenToAdd)
+            foreach (var child in Children)
             {
                 if (parentCard.Children.Contains(child) == false)
                     parentCard.Children.Add(child);
             }
 
-            parentCard.AddChildrenToParent(childrenToAdd);
+            parentCard.AddChildrenToParent(children);
         }
     }
 
     private void RemoveChildrenFromParent(List<GameObject> children)
     {
-        List<GameObject> childrenToRemove = new List<GameObject>(children);
-
         if (Parent != null)
         {
-            print("delete to parent");
             Card parentCard = Parent.GetComponent<Card>();
 
             if (parentCard.Children.Contains(gameObject))
                 parentCard.Children.Remove(gameObject);
-
-            foreach (var child in childrenToRemove)
+            
+            foreach (var child in children)
             {
                 if (parentCard.Children.Contains(child))
                     parentCard.Children.Remove(child);
             }
 
-            parentCard.RemoveChildrenFromParent(childrenToRemove);
+            parentCard.RemoveChildrenFromParent(children);
         }
     }
 }
