@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MohimaScene.unity
+    guid: 052e9fa2d1edacf4b8b2585c0d5a0b2b
+  - enabled: 1
+    path: Assets/Scenes/SimScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
