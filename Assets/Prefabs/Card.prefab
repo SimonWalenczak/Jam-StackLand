@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1740897849911037995}
   - component: {fileID: 6702149576487086876}
   m_Layer: 8
-  m_Name: Text (TMP)
+  m_Name: NbChildrenText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -699,7 +699,7 @@ GameObject:
   - component: {fileID: 7944950347918634331}
   - component: {fileID: 9029335947814617037}
   - component: {fileID: 4890874904644824170}
-  - component: {fileID: 4390949277145956812}
+  - component: {fileID: 2400634028211736723}
   m_Layer: 8
   m_Name: Card
   m_TagString: Untagged
@@ -841,7 +841,7 @@ MonoBehaviour:
   Parent: {fileID: 0}
   Children: []
   NbChildrenGroup: {fileID: 1207173204357511657}
---- !u!114 &4390949277145956812
+--- !u!114 &2400634028211736723
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -854,9 +854,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Data: {fileID: 11400000, guid: 7a88bbec6bf54df4797e350291e8f1b2, type: 2}
-  GoldValueGroup: {fileID: 3822987255924561793}
-  DefValueGroup: {fileID: 8882867936923649368}
-  NbChildrenText: {fileID: 6702149576487086876}
+  _goldValueGroup: {fileID: 8882867936923649368}
+  _defValueGroup: {fileID: 3822987255924561793}
+  _nbChildrenText: {fileID: 0}
+  _subjectMaterial: {fileID: 0}
+  _backgroundMaterial: {fileID: 0}
 --- !u!1 &8882867936923649368
 GameObject:
   m_ObjectHideFlags: 0

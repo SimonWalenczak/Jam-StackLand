@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d947b5bb4cd4ad546951f8b2cdbdb452, type: 3}
   m_Name: Forge
   m_EditorClassIdentifier: 
-  Type: 1
+  Type: 3
   ElementsRequieresForCraft:
   - ElementToCraft: {fileID: 11400000, guid: ecad37f84a76fdf45bd8588612644f56, type: 2}
     ElementsRequieres:
@@ -25,7 +25,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 737db230ec8e89f42844efea509fd42d, type: 2}
     - {fileID: 11400000, guid: 92bc2e68c4ff3f740abf11768f9ca063, type: 2}
     TimeToCraft: 20
-  CardSprite: {fileID: 0}
+  SubjectMaterial: {fileID: 2100000, guid: bb7a9412b7df29a47a5523d3a90d449b, type: 2}
+  BackgroundMaterial: {fileID: 2100000, guid: bb7a9412b7df29a47a5523d3a90d449b, type: 2}
   GoldValue: 0
   DefValue: 0
   RepearElement: []

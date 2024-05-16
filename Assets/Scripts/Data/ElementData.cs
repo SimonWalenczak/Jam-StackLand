@@ -18,7 +18,9 @@ public class ElementData : ScriptableObject
     
     [field: SerializeField] public List<ElementsRequieresForCraft> ElementsRequieresForCraft;
     
-    public Sprite CardSprite;
+    public Material SubjectMaterial;
+    public Material BackgroundMaterial;
+    
     public int GoldValue;
     public int DefValue;
     
