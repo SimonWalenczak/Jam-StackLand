@@ -14,19 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 3
   ElementsRequieresForCraft:
-  - ElementToCraft: {fileID: 11400000, guid: ecad37f84a76fdf45bd8588612644f56, type: 2}
-    ElementsRequieres:
-    - {fileID: 11400000, guid: b15fe192a0e741c43af4eb058d30211e, type: 2}
-    - {fileID: 11400000, guid: 737db230ec8e89f42844efea509fd42d, type: 2}
-    TimeToCraft: 12
   - ElementToCraft: {fileID: 11400000, guid: 82d5523380cea754087187ca295a17ec, type: 2}
     ElementsRequieres:
     - {fileID: 11400000, guid: b15fe192a0e741c43af4eb058d30211e, type: 2}
     - {fileID: 11400000, guid: 737db230ec8e89f42844efea509fd42d, type: 2}
     - {fileID: 11400000, guid: 92bc2e68c4ff3f740abf11768f9ca063, type: 2}
     TimeToCraft: 20
-  SubjectMaterial: {fileID: 2100000, guid: bb7a9412b7df29a47a5523d3a90d449b, type: 2}
-  BackgroundMaterial: {fileID: 2100000, guid: bb7a9412b7df29a47a5523d3a90d449b, type: 2}
+  - ElementToCraft: {fileID: 11400000, guid: ecad37f84a76fdf45bd8588612644f56, type: 2}
+    ElementsRequieres:
+    - {fileID: 11400000, guid: b15fe192a0e741c43af4eb058d30211e, type: 2}
+    - {fileID: 11400000, guid: 737db230ec8e89f42844efea509fd42d, type: 2}
+    TimeToCraft: 12
+  - ElementToCraft: {fileID: 11400000, guid: 39cc6e79b6f07494c8286899178407fb, type: 2}
+    ElementsRequieres:
+    - {fileID: 11400000, guid: b15fe192a0e741c43af4eb058d30211e, type: 2}
+    TimeToCraft: 1
+  CardMaterial: {fileID: 2100000, guid: 9136c2c1ae51b7d40bd8af08e17e3718, type: 2}
   GoldValue: 0
   DefValue: 0
   RepearElement: []

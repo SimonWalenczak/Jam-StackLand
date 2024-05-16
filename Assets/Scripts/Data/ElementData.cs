@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public enum ElementType
 {
@@ -18,8 +19,7 @@ public class ElementData : ScriptableObject
     
     [field: SerializeField] public List<ElementsRequieresForCraft> ElementsRequieresForCraft;
     
-    public Material SubjectMaterial;
-    public Material BackgroundMaterial;
+    public Material CardMaterial;
     
     public int GoldValue;
     public int DefValue;

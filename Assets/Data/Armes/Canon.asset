@@ -13,14 +13,11 @@ MonoBehaviour:
   m_Name: Canon
   m_EditorClassIdentifier: 
   Type: 0
-  ElementsRequieres:
-  - {fileID: 11400000, guid: e6c5e748b7d58424baae1a20d965af90, type: 2}
-  - {fileID: 11400000, guid: b15fe192a0e741c43af4eb058d30211e, type: 2}
-  - {fileID: 11400000, guid: 737db230ec8e89f42844efea509fd42d, type: 2}
-  TimeToCraft: 12
-  CardSprite: {fileID: 0}
+  ElementsRequieresForCraft: []
+  CardMaterial: {fileID: 2100000, guid: 50e8ddf8ea4e7bc4b9a06898127d1698, type: 2}
   GoldValue: 2
   DefValue: 0
   RepearElement:
   - {fileID: 11400000, guid: 737db230ec8e89f42844efea509fd42d, type: 2}
   - {fileID: 11400000, guid: 737db230ec8e89f42844efea509fd42d, type: 2}
+  Destructable: 0

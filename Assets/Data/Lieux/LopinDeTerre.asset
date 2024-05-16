@@ -22,7 +22,7 @@ MonoBehaviour:
     ElementsRequieres:
     - {fileID: 11400000, guid: 4eb1854b5e3728e4796dee483454eedd, type: 2}
     TimeToCraft: 6
-  CardSprite: {fileID: 0}
+  CardMaterial: {fileID: 2100000, guid: c0d3f1b1057672b4fa5854162a6eba5d, type: 2}
   GoldValue: 0
   DefValue: 0
   RepearElement: []

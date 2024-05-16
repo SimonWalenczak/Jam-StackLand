@@ -854,11 +854,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Data: {fileID: 11400000, guid: 7a88bbec6bf54df4797e350291e8f1b2, type: 2}
-  _goldValueGroup: {fileID: 8882867936923649368}
-  _defValueGroup: {fileID: 3822987255924561793}
-  _nbChildrenText: {fileID: 0}
-  _subjectMaterial: {fileID: 0}
-  _backgroundMaterial: {fileID: 0}
+  _goldValueText: {fileID: 4939878163248531674}
+  _defValueText: {fileID: 3485951090153370366}
+  _nbChildrenText: {fileID: 6702149576487086876}
+  Background: {fileID: 0}
+  CardSubject: {fileID: 0}
 --- !u!1 &8882867936923649368
 GameObject:
   m_ObjectHideFlags: 0

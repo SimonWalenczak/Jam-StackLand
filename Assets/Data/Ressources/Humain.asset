@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 4
   ElementsRequieresForCraft: []
-  SubjectMaterial: {fileID: 0}
-  BackgroundMaterial: {fileID: 0}
+  CardMaterial: {fileID: 2100000, guid: 74627f06dc2c540419a0746ad5a8d3bb, type: 2}
   GoldValue: 0
   DefValue: 0
   RepearElement: []

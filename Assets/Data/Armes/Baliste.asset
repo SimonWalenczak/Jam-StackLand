@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Baliste
   m_EditorClassIdentifier: 
   Type: 0
-  ElementsCraftable: []
   ElementsRequieresForCraft: []
-  CardSprite: {fileID: 0}
+  CardMaterial: {fileID: 2100000, guid: b0a0e29bcd0bc4b4aa0f10f30956c177, type: 2}
   GoldValue: 3
-  DefValue: 0
+  DefValue: 5
   RepearElement:
   - {fileID: 11400000, guid: a83be6a51d7f8774c86ed99e995d0cdc, type: 2}
   - {fileID: 11400000, guid: a83be6a51d7f8774c86ed99e995d0cdc, type: 2}
   - {fileID: 11400000, guid: 92bc2e68c4ff3f740abf11768f9ca063, type: 2}
+  Destructable: 0

@@ -13,16 +13,12 @@ MonoBehaviour:
   m_Name: Catapulte
   m_EditorClassIdentifier: 
   Type: 0
-  ElementsRequieres:
-  - {fileID: 11400000, guid: e6c5e748b7d58424baae1a20d965af90, type: 2}
-  - {fileID: 11400000, guid: b15fe192a0e741c43af4eb058d30211e, type: 2}
-  - {fileID: 11400000, guid: 737db230ec8e89f42844efea509fd42d, type: 2}
-  - {fileID: 11400000, guid: 92bc2e68c4ff3f740abf11768f9ca063, type: 2}
-  TimeToCraft: 20
-  CardSprite: {fileID: 0}
+  ElementsRequieresForCraft: []
+  CardMaterial: {fileID: 2100000, guid: 374601adf2a64a2469d71001db081c20, type: 2}
   GoldValue: 4
   DefValue: 0
   RepearElement:
   - {fileID: 11400000, guid: a83be6a51d7f8774c86ed99e995d0cdc, type: 2}
   - {fileID: 11400000, guid: 737db230ec8e89f42844efea509fd42d, type: 2}
   - {fileID: 11400000, guid: 92bc2e68c4ff3f740abf11768f9ca063, type: 2}
+  Destructable: 0
