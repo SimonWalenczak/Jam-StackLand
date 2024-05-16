@@ -1,9 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 public class CardVisual : MonoBehaviour
 {
@@ -17,6 +15,9 @@ public class CardVisual : MonoBehaviour
     
     [SerializeField] private GameObject CardBody;
 
+    public Image CraftingBar;
+    [SerializeField] private Vector3 CraftingBarPosition;
+    
     private void Start()
     {
         _card = GetComponent<Card>();
@@ -27,6 +28,8 @@ public class CardVisual : MonoBehaviour
         _goldValueText.text = Data.GoldValue.ToString();
 
         gameObject.name = Data.name;
+        
+        SetupCraftBar(GameManager.Instance.HealthBarCanvas);
     }
 
     private void Update()
@@ -48,6 +51,14 @@ public class CardVisual : MonoBehaviour
             
             ChangeSortingPriority(0);
         }
+        
+        CraftingBar.transform.position = transform.position + CraftingBarPosition;
+    }
+
+    private void SetupCraftBar(Canvas canvas)
+    {
+        CraftingBar.transform.SetParent(canvas.transform);
+        CraftingBar.gameObject.SetActive(false);
     }
     
     [ContextMenu("ApplySortingPriority")]

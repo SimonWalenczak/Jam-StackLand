@@ -25,10 +25,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: b15fe192a0e741c43af4eb058d30211e, type: 2}
     - {fileID: 11400000, guid: 737db230ec8e89f42844efea509fd42d, type: 2}
     TimeToCraft: 12
-  - ElementToCraft: {fileID: 11400000, guid: 39cc6e79b6f07494c8286899178407fb, type: 2}
-    ElementsRequieres:
-    - {fileID: 11400000, guid: b15fe192a0e741c43af4eb058d30211e, type: 2}
-    TimeToCraft: 1
   CardMaterial: {fileID: 2100000, guid: 9136c2c1ae51b7d40bd8af08e17e3718, type: 2}
   GoldValue: 0
   DefValue: 0
