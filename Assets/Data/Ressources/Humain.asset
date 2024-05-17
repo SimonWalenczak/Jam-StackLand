@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d947b5bb4cd4ad546951f8b2cdbdb452, type: 3}
   m_Name: Humain
   m_EditorClassIdentifier: 
-  Type: 4
+  Type: 3
   ElementsRequieresForCraft: []
   CardMaterial: {fileID: 2100000, guid: 74627f06dc2c540419a0746ad5a8d3bb, type: 2}
   GoldValue: 0

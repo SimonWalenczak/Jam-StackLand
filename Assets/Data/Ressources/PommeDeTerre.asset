@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d947b5bb4cd4ad546951f8b2cdbdb452, type: 3}
   m_Name: PommeDeTerre
   m_EditorClassIdentifier: 
-  Type: 4
+  Type: 5
   ElementsRequieresForCraft: []
   CardMaterial: {fileID: 2100000, guid: 9fc5218f4763d814e8dc81cc4f3847e9, type: 2}
   GoldValue: 0

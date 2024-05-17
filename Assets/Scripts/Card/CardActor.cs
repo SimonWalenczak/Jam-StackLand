@@ -1,4 +1,6 @@
+using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class CardActor : MonoBehaviour
@@ -33,8 +35,21 @@ public class CardActor : MonoBehaviour
             //Debug.Log($"{index} : " + element.ElementToCraft);
         }
         //EndDebug
+
+        StartCoroutine(Appear());
     }
 
+    IEnumerator Appear()
+    {
+        System.Random rnd = new System.Random();
+        int a = rnd.Next(-3, 4);
+        
+        Vector3 positionToReach = transform.position + new Vector3(a, 0, 1);
+        transform.DOJump(positionToReach, 1, 3, 1);
+        yield return new WaitForSeconds(1);
+    }
+    
+    
     private void Update()
     {
         if (_card.Children.Count != 0)
@@ -64,13 +79,16 @@ public class CardActor : MonoBehaviour
 
             if (currentTimer >= maxTimer)
             {
-                ResetCrafting();
-
                 foreach (var child in _card.Children)
                 {
-                    if (child.GetComponent<CardVisual>().Data.name != "Humain")
+                    if (child.GetComponent<CardVisual>().Data.Type != ElementType.Humain)
                     {
                         Destroy(child);
+                    }
+                    else
+                    {
+                        child.transform.parent = null;
+                        child.GetComponent<Card>().Parent = null;
                     }
                 }
 
@@ -78,6 +96,8 @@ public class CardActor : MonoBehaviour
 
                 if (IsCraftingCard)
                     CreatNewCard(elementToCraft);
+
+                ResetCrafting();
             }
         }
     }
@@ -125,7 +145,8 @@ public class CardActor : MonoBehaviour
             }
 
             //Check if count of elements are equal to the elements requires list
-            if (nbElementRequiresPresent == element.ElementsRequieres.Count && element.ElementsRequieres.Count == _card.Children.Count && IsCraftingCard == false)
+            if (nbElementRequiresPresent == element.ElementsRequieres.Count &&
+                element.ElementsRequieres.Count == _card.Children.Count && IsCraftingCard == false)
             {
                 print($"Tous les élements sont prêt pour créer {element.ElementToCraft}");
                 StartNewCardCreation(element);

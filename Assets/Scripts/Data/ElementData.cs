@@ -8,6 +8,7 @@ public enum ElementType
     Arme,
     LopinDeTerre,
     Foret,
+    Humain,
     Lieu,
     Ressource
 }

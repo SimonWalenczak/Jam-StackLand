@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d947b5bb4cd4ad546951f8b2cdbdb452, type: 3}
   m_Name: Bois
   m_EditorClassIdentifier: 
-  Type: 4
+  Type: 5
   ElementsRequieresForCraft: []
   CardMaterial: {fileID: 2100000, guid: 51f0ed9fca7d34749a563c2d282b4b78, type: 2}
   GoldValue: 0

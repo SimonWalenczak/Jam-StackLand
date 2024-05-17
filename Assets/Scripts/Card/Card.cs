@@ -58,9 +58,9 @@ public class Card : MonoBehaviour
     {
         if (Parent != null)
         {
-            transform.position = new Vector3(Parent.transform.position.x, Parent.transform.position.y + 0.01f,
+            transform.position = new Vector3(Parent.transform.position.x, Parent.transform.position.y + 0.05f,
                 Parent.transform.position.z - 0.5f);
-            
+
             NbChildrenGroup.SetActive(false);
         }
 

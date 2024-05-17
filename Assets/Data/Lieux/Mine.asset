@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d947b5bb4cd4ad546951f8b2cdbdb452, type: 3}
   m_Name: Mine
   m_EditorClassIdentifier: 
-  Type: 3
+  Type: 4
   ElementsRequieresForCraft:
   - ElementToCraft: {fileID: 11400000, guid: 737db230ec8e89f42844efea509fd42d, type: 2}
     ElementsRequieres:

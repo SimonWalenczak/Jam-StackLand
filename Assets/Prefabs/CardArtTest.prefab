@@ -765,8 +765,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 11.823145, y: 0.2263979, z: 16.747414}
-  m_Center: {x: 0.025648275, y: 0.054509595, z: -0.02564907}
+  m_Size: {x: 11.823145, y: 0.6562545, z: 16.747414}
+  m_Center: {x: 0.025648275, y: -0.16041854, z: -0.02564907}
 --- !u!114 &1021302781873396974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -815,6 +815,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   childrenNames: []
+  currentTimer: 0
+  maxTimer: 0
+  IsCraftingCard: 0
 --- !u!1 &8339714101645387087
 GameObject:
   m_ObjectHideFlags: 0
