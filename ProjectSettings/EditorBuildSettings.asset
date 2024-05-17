@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MohimaScene.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: 052e9fa2d1edacf4b8b2585c0d5a0b2b
   - enabled: 1
-    path: Assets/Scenes/SimScene.unity
+    path: Assets/Scenes/MainScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/CreditScene.unity

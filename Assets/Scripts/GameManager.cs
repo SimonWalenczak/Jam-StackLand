@@ -1,7 +1,9 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -29,6 +31,15 @@ public class GameManager : MonoBehaviour
     public int NbBooster;
     public int BoosterPrice;
 
+    public bool IsDayTime;
+    public int DayTimer;
+    public float CurrentDayTimer;
+    public float NightTimer;
+
+    public Image DayBar;
+    public GameObject DayIcon;
+    public GameObject BlackScreen;
+
     private void Awake()
     {
         if (Instance == null)
@@ -39,6 +50,11 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("There already another GameManager in this scene !");
         }
+    }
+
+    private void Start()
+    {
+        IsDayTime = true;
     }
 
     private void Update()
@@ -53,6 +69,8 @@ public class GameManager : MonoBehaviour
         DefText.text = DefenseValue.ToString();
 
         GoldText.text = GoldValue.ToString();
+
+        DayNight();
     }
 
     public void BuyBooster()
@@ -64,5 +82,41 @@ public class GameManager : MonoBehaviour
             NbBooster++;
             GoldValue -= BoosterPrice;
         }
+    }
+
+    private void DayNight()
+    {
+        if (IsDayTime)
+        {
+            CurrentDayTimer += Time.deltaTime;
+
+            DayBar.fillAmount = CurrentDayTimer / DayTimer;
+
+            if (CurrentDayTimer >= DayTimer)
+            {
+                StartCoroutine(CheckNightAttack());
+            }
+        }
+    }
+
+    public IEnumerator CheckNightAttack()
+    {
+        IsDayTime = false;
+        
+        DayIcon.GetComponent<Animator>().SetBool("IsDay", false);
+
+        BlackScreen.SetActive(true);
+
+        yield return new WaitForSeconds(NightTimer);
+
+        BlackScreen.GetComponent<Animator>().SetBool("IsDay", true);
+
+        DayIcon.GetComponent<Animator>().SetBool("IsDay", true);
+
+        BlackScreen.SetActive(false);
+        
+        CurrentDayTimer = 0;
+
+        IsDayTime = true;
     }
 }
