@@ -680,6 +680,22 @@ MonoBehaviour:
   HealthBarCanvas: {fileID: 1082008541}
   Camera: {fileID: 963194227}
   CardPrefab: {fileID: 7109506110775985773, guid: a4765484eba1bb6438f4e69f9ab21f7b, type: 3}
+  ElementCraftable:
+  - {fileID: 11400000, guid: a83be6a51d7f8774c86ed99e995d0cdc, type: 2}
+  - {fileID: 11400000, guid: 4eb1854b5e3728e4796dee483454eedd, type: 2}
+  - {fileID: 11400000, guid: 92bc2e68c4ff3f740abf11768f9ca063, type: 2}
+  - {fileID: 11400000, guid: b15fe192a0e741c43af4eb058d30211e, type: 2}
+  - {fileID: 11400000, guid: 737db230ec8e89f42844efea509fd42d, type: 2}
+  - {fileID: 11400000, guid: 762acbc4f89fe2e4ea124f2b1251ff0c, type: 2}
+  - {fileID: 11400000, guid: d5846468dc39fbb4cb9b6a430f68f366, type: 2}
+  - {fileID: 11400000, guid: ad378e9137e566246b37c2e74f427b9e, type: 2}
+  - {fileID: 11400000, guid: 197f791eb3b781d47937daf7655735ab, type: 2}
+  - {fileID: 11400000, guid: e6c5e748b7d58424baae1a20d965af90, type: 2}
+  - {fileID: 11400000, guid: 39cc6e79b6f07494c8286899178407fb, type: 2}
+  - {fileID: 11400000, guid: 7a88bbec6bf54df4797e350291e8f1b2, type: 2}
+  - {fileID: 11400000, guid: 82d5523380cea754087187ca295a17ec, type: 2}
+  - {fileID: 11400000, guid: cfe414e7fa40de245baf43da3f1cdcec, type: 2}
+  - {fileID: 11400000, guid: ecad37f84a76fdf45bd8588612644f56, type: 2}
 --- !u!114 &607392671
 MonoBehaviour:
   m_ObjectHideFlags: 0

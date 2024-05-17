@@ -43,13 +43,13 @@ public class CardActor : MonoBehaviour
     {
         System.Random rnd = new System.Random();
         int a = rnd.Next(-3, 4);
-        
+
         Vector3 positionToReach = transform.position + new Vector3(a, 0, 1);
         transform.DOJump(positionToReach, 1, 3, 1);
         yield return new WaitForSeconds(1);
     }
-    
-    
+
+
     private void Update()
     {
         if (_card.Children.Count != 0)
@@ -164,11 +164,6 @@ public class CardActor : MonoBehaviour
         maxTimer = element.TimeToCraft;
         elementToCraft = element.ElementToCraft;
 
-        StartCounterCraft(element);
-    }
-
-    private void StartCounterCraft(ElementsRequieresForCraft element)
-    {
         _cardVisual.CraftingBar.gameObject.SetActive(true);
     }
 
@@ -179,7 +174,21 @@ public class CardActor : MonoBehaviour
 
         CardVisual currentCardVisual = currentCard.GetComponent<CardVisual>();
 
-        currentCardVisual.Data = element;
+        if (_cardVisual.Data.Type == ElementType.Foret)
+        {
+            int rnd = Random.Range(0, 2);
+            ElementData elementName;
+            if (rnd == 0)
+                elementName = GameManager.Instance.ElementCraftable.Find(x => x.name == "Bois");
+            else
+                elementName = GameManager.Instance.ElementCraftable.Find(x => x.name == "Fil");
+
+            currentCardVisual.Data = elementName;
+        }
+        else
+        {
+            currentCardVisual.Data = element;
+        }
 
         print($"Element {element} créé !");
     }

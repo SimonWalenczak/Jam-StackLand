@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -10,6 +11,8 @@ public class GameManager : MonoBehaviour
     public Camera Camera;
 
     public GameObject CardPrefab;
+
+    public List<ElementData> ElementCraftable;
     
     private void Awake()
     {
