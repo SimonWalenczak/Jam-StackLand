@@ -24,6 +24,8 @@ public class CardActor : MonoBehaviour
         _card = GetComponent<Card>();
         _cardVisual = GetComponent<CardVisual>();
 
+        GameManager.Instance.CardInGame.Add(gameObject);
+
         Elements = _cardVisual.Data.ElementsRequieresForCraft;
         Elements.Sort((x, y) => x.ElementsRequieres.Count.CompareTo(y.ElementsRequieres.Count));
         Elements.Reverse();
@@ -83,10 +85,17 @@ public class CardActor : MonoBehaviour
                 {
                     if (child.GetComponent<CardVisual>().Data.Type != ElementType.Humain)
                     {
+                        GameManager.Instance.CardInGame.Remove(child);
                         Destroy(child);
                     }
                     else
                     {
+                        child.GetComponent<Card>().Children.Clear();
+
+                        child.GetComponent<Card>().enabled = true;
+                        child.GetComponent<CardVisual>().enabled = true;
+                        child.GetComponent<CardActor>().enabled = true;
+
                         child.transform.parent = null;
                         child.GetComponent<Card>().Parent = null;
                     }

@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -13,6 +15,11 @@ public class GameManager : MonoBehaviour
     public GameObject CardPrefab;
 
     public List<ElementData> ElementCraftable;
+
+    public List<GameObject> CardInGame = new List<GameObject>();
+    
+    public int DefenseValue;
+    public TextMeshProUGUI DefText;
     
     private void Awake()
     {
@@ -24,5 +31,17 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("There already another GameManager in this scene !");
         }
+    }
+
+    private void Update()
+    {
+        DefenseValue = 0;
+        
+        foreach (var card in CardInGame)
+        {
+            DefenseValue += card.GetComponent<CardVisual>().Data.DefValue;
+        }
+        
+        DefText.text = DefenseValue.ToString();
     }
 }
