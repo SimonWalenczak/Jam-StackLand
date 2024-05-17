@@ -4,6 +4,8 @@ public class PlayerController : MonoBehaviour
 {
     public GameObject CardSelected;
 
+    public GameObject CardOvered;
+    
     private RaycastHit[] _hits = new RaycastHit[16];
 
     private void Update()
