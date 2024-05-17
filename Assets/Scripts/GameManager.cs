@@ -41,11 +41,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        BoosterPrice = 0;
-    }
-
     private void Update()
     {
         DefenseValue = 0;
