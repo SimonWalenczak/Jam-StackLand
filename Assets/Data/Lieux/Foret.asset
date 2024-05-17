@@ -23,7 +23,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: b15fe192a0e741c43af4eb058d30211e, type: 2}
     TimeToCraft: 10
   CardMaterial: {fileID: 2100000, guid: ff2e69586286f26498d5f25af430e21b, type: 2}
-  GoldValue: 5
+  GoldValue: 0
   DefValue: 0
   RepearElement: []
   Destructable: 0

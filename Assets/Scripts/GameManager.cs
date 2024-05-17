@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -19,9 +20,6 @@ public class GameManager : MonoBehaviour
     
     public int DefenseValue;
     public TextMeshProUGUI DefText;
-
-    public int GoldValue;
-    public TextMeshProUGUI GoldText;
     
     private void Awake()
     {
@@ -45,7 +43,5 @@ public class GameManager : MonoBehaviour
         }
         
         DefText.text = DefenseValue.ToString();
-
-        GoldText.text = GoldValue.ToString();
     }
 }
