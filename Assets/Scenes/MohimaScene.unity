@@ -685,7 +685,8 @@ PrefabInstance:
       value: Credits
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7712902428065739518, guid: d3092ef164680b64fb1d8ae8ca833037, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8608084523849968253, guid: d3092ef164680b64fb1d8ae8ca833037, type: 3}
@@ -1208,7 +1209,8 @@ PrefabInstance:
       value: Quit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7712902428065739518, guid: d3092ef164680b64fb1d8ae8ca833037, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8608084523849968253, guid: d3092ef164680b64fb1d8ae8ca833037, type: 3}
@@ -1400,7 +1402,8 @@ PrefabInstance:
       value: Play
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7712902428065739518, guid: d3092ef164680b64fb1d8ae8ca833037, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8608084523849968253, guid: d3092ef164680b64fb1d8ae8ca833037, type: 3}
