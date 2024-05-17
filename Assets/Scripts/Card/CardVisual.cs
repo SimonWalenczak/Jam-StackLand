@@ -17,6 +17,9 @@ public class CardVisual : MonoBehaviour
 
     public Image CraftingBar;
     [SerializeField] private Vector3 CraftingBarPosition;
+
+    public Image DeleteRoue;
+    [SerializeField] private Vector3 DeleteRouePosition;
     
     private void Start()
     {
@@ -53,12 +56,18 @@ public class CardVisual : MonoBehaviour
         }
         
         CraftingBar.transform.position = transform.position + CraftingBarPosition;
+
+        DeleteRoue.transform.position = transform.position + DeleteRouePosition;
     }
 
     private void SetupCraftBar(Canvas canvas)
     {
         CraftingBar.transform.SetParent(canvas.transform);
         CraftingBar.gameObject.SetActive(false);
+
+        DeleteRoue.transform.SetParent(canvas.transform);
+        DeleteRoue.fillAmount = 0;
+        DeleteRoue.gameObject.SetActive(false);
     }
     
     [ContextMenu("ApplySortingPriority")]

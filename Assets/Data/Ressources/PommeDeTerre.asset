@@ -15,7 +15,7 @@ MonoBehaviour:
   Type: 5
   ElementsRequieresForCraft: []
   CardMaterial: {fileID: 2100000, guid: 9fc5218f4763d814e8dc81cc4f3847e9, type: 2}
-  GoldValue: 0
+  GoldValue: 5
   DefValue: 0
   RepearElement: []
   Destructable: 0

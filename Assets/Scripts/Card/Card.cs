@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +13,22 @@ public class Card : MonoBehaviour
     private bool IsParentable;
 
     [SerializeField] private GameObject NbChildrenGroup;
+
+    private void OnMouseOver()
+    {
+        if (GameManager.Instance.PlayerController.CardSelected == null && Children.Count == 0 && Parent == null)
+        {
+            GameManager.Instance.PlayerController.CardOvered = gameObject;
+        }
+    }
+
+    private void OnMouseExit()
+    {
+        if (GameManager.Instance.PlayerController.CardOvered == gameObject)
+        {
+            GameManager.Instance.PlayerController.CardOvered = null;
+        }
+    }
 
     private void OnMouseDown()
     {
@@ -62,6 +79,11 @@ public class Card : MonoBehaviour
                 Parent.transform.position.z - 0.5f);
 
             NbChildrenGroup.SetActive(false);
+            
+            if (GameManager.Instance.PlayerController.CardOvered == gameObject)
+            {
+                GameManager.Instance.PlayerController.CardOvered = null;
+            }
         }
 
         if (Parent == null)
