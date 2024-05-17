@@ -2,27 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Booster : MonoBehaviour
-{
-    public BoosterData boosterData;
+//public class Booster : MonoBehaviour
+//{
+//    public BoosterData boosterData;
 
-    [SerializeField] GameObject cardPrefab;
+//    [SerializeField] GameObject cardPrefab;
 
-    int currentCard = 0;
+//    int currentCard = 0;
 
-    private void OnMouseUpAsButton()
-    {
-        GameObject card = Instantiate(cardPrefab);
-        card.GetComponent<CardVisual>().Data = boosterData.CardsInBooster[currentCard];
+//    private void OnMouseUpAsButton()
+//    {
+//        GameObject card = Instantiate(cardPrefab);
+//        card.GetComponent<CardVisual>().Data = boosterData.CardsInBooster[currentCard];
 
-        currentCard++;
+//        currentCard++;
 
-        if (currentCard >= boosterData.CardsInBooster.Count)
-        {
-            Destroy(gameObject);
-        }
+//        if (currentCard >= boosterData.CardsInBooster.Count)
+//        {
+//            Destroy(gameObject);
+//        }
 
 
-    }
+//    }
 
-}
+//}
