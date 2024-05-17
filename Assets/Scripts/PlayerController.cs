@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (CardSelected != null)
+        if (CardSelected != null && GameManager.Instance.IsDayTime)
         {
             Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
 

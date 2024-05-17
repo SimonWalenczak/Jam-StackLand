@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -23,8 +24,12 @@ public class GameManager : MonoBehaviour
     public int DefenseValue;
     public TextMeshProUGUI DefText;
 
+    public TextMeshProUGUI AttackText;
+    
     public int GoldValue;
     public TextMeshProUGUI GoldText;
+
+    public AttackData Attacks;
 
     public GameObject BoosterPrefab;
     public BoosterData Boosters;
@@ -39,6 +44,11 @@ public class GameManager : MonoBehaviour
     public Image DayBar;
     public GameObject DayIcon;
     public GameObject BlackScreen;
+
+    public TextMeshProUGUI TextNightResult;
+    
+    public int nbDay;
+    public TextMeshProUGUI DayCountText;
 
     private void Awake()
     {
@@ -55,6 +65,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         IsDayTime = true;
+        nbDay = 0;
     }
 
     private void Update()
@@ -68,7 +79,11 @@ public class GameManager : MonoBehaviour
 
         DefText.text = DefenseValue.ToString();
 
+        AttackText.text = Attacks.Attacks[nbDay].ToString();
+        
         GoldText.text = GoldValue.ToString();
+
+        DayCountText.text = new string($"Jour {nbDay + 1}");
 
         DayNight();
     }
@@ -107,7 +122,26 @@ public class GameManager : MonoBehaviour
 
         BlackScreen.SetActive(true);
 
+        string text = "";
+        
+        if (DefenseValue >= Attacks.Attacks[nbDay])
+        {
+            text = new string($"Vous avez gagné car il vous avez force défensive supérieure de {DefenseValue - Attacks.Attacks[nbDay]} !");
+
+        }
+        else
+        {
+            text = new string($"Vous avez perdu car il vous a manqué {Attacks.Attacks[nbDay] - DefenseValue} de force défensive !");
+        }
+        
+        TextNightResult.text = text;
+
         yield return new WaitForSeconds(NightTimer);
+
+        if (DefenseValue < Attacks.Attacks[nbDay])
+        {
+            SceneManager.LoadScene(0);
+        }
 
         BlackScreen.GetComponent<Animator>().SetBool("IsDay", true);
 
@@ -118,5 +152,12 @@ public class GameManager : MonoBehaviour
         CurrentDayTimer = 0;
 
         IsDayTime = true;
+
+        nbDay++;
+    }
+
+    public void EndDay()
+    {
+        CurrentDayTimer = DayTimer - 0.5f;
     }
 }
